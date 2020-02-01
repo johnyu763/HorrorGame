@@ -28,7 +28,7 @@ public class Moving : MonoBehaviour
     void Update()
     {
         moveVector = new Vector3(0f, 0f, walkSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        rotation.y = Input.GetAxisRaw("Horizontal") * 180 * Time.deltaTime;
+        rotation.y = Input.GetAxisRaw("Mouse X") * 180 * Time.deltaTime;
         transform.Rotate(0f, rotation.y, 0f);
 
 

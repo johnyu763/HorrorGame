@@ -361,6 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab63bb01644ee594d84d52bddd10b912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horror: {fileID: 1612420779}
+  home: {fileID: 1539929472}
+  bathDoor: {fileID: 1000013002544146}
 --- !u!82 &165315688
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1643,7 +1646,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7018112577910079846, guid: a920e61cc050daf4dbd34c8eb462c8ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a920e61cc050daf4dbd34c8eb462c8ed, type: 3}
 --- !u!215 &1042990060
 ReflectionProbe:
@@ -1851,7 +1855,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1073905528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c93be2c6774a4ba85a7d253bd3711, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b0c2d8863f80c4f8e29e4858388d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
@@ -2041,7 +2045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.63
+      value: -1.76
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2049,7 +2053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2085,15 +2089,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 400106, guid: aa723b44260e74040869a722c46a85c5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa723b44260e74040869a722c46a85c5, type: 3}
@@ -2781,6 +2785,9 @@ GameObject:
   - component: {fileID: 1587490840}
   - component: {fileID: 1587490839}
   - component: {fileID: 1587490838}
+  - component: {fileID: 1612420781}
+  - component: {fileID: 1612420780}
+  - component: {fileID: 1612420782}
   m_Layer: 0
   m_Name: firstMissionMarker
   m_TagString: Untagged
@@ -2802,7 +2809,41 @@ Transform:
   m_Father: {fileID: 1610045156}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!122 &1587490838
+--- !u!114 &1612420782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612420779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e79003531361ea4cafe121b5c40bd2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: {fileID: 1539929472}
+  horror: {fileID: 1612420779}
+--- !u!1 &1641771136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641771141}
+  - component: {fileID: 1641771140}
+  - component: {fileID: 1641771139}
+  - component: {fileID: 1641771138}
+  - component: {fileID: 1641771137}
+  m_Layer: 0
+  m_Name: secondMissionMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!122 &1641771137
 Halo:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3675,6 +3716,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1897269127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7018112577910179458, guid: a920e61cc050daf4dbd34c8eb462c8ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 997185209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897269128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897269127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b0c2d8863f80c4f8e29e4858388d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 2
+  rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &2091712992
 GameObject:
   m_ObjectHideFlags: 0

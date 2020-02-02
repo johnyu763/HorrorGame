@@ -22,7 +22,6 @@ public class MoveCamera : MonoBehaviour
         {
             transform.Rotate(-vert, 0f, 0f);
         }
-      
 
     }
 }

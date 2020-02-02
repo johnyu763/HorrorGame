@@ -15,7 +15,7 @@ public class MissionControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             StartCoroutine(nextState());
         }

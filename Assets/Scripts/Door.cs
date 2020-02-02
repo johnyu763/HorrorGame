@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Pressed E.");
+                // Debug.Log("Pressed E.");
                 anim.SetTrigger("DoorButton");
             }
         }

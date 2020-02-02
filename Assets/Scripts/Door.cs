@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
         }
         else if (other.tag == "PillBottle")
         {
-            Debug.Log("Entered");
+            // Debug.Log("Entered");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GameObject questLog = GameObject.FindGameObjectWithTag("Quests");
@@ -31,6 +31,23 @@ public class Door : MonoBehaviour
                                         
                     GameObject.FindGameObjectWithTag("PillBottle").transform.GetChild(0).GetComponent<Highlight>().isHighlightable = false;
                     other.tag = "Disable";
+                }
+            }
+        }
+        else if (other.tag == "BathroomCabinet")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Animator anim = other.GetComponentInChildren<Animator>();
+                GameObject questLog = GameObject.FindGameObjectWithTag("Quests");
+
+                if (questLog != null)
+                {
+                    anim.SetTrigger("DoorButton");
+
+                    StartCoroutine(questLog.GetComponent<MissionControl>().nextState());
+
+                    other.tag = "Door";
                 }
             }
         }

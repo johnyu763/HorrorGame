@@ -8,6 +8,7 @@ TagManager:
   - Quests
   - PillBottle
   - Disable
+  - BathroomCabinet
   layers:
   - Default
   - TransparentFX

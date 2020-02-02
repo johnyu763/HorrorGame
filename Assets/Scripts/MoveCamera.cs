@@ -18,7 +18,7 @@ public class MoveCamera : MonoBehaviour
         Debug.Log(Screen.currentResolution);
         var vert = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * 180;
         Debug.Log(transform.rotation.x - vert / 180f);
-        if(transform.rotation.x - vert/180f >= -0.3f && transform.rotation.x - vert/180f <= 0.35f)
+        if(transform.rotation.x - vert/180f >= -0.4f && transform.rotation.x - vert/180f <= 0.5f)
         {
             transform.Rotate(-vert, 0f, 0f);
         }

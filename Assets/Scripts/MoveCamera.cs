@@ -20,7 +20,7 @@ public class MoveCamera : MonoBehaviour
         //offset = Quaternion.AngleAxis(rot, Vector3.up) * offset;
         //transform.position = Player.transform.position + offset;
 
-        Debug.Log(transform.rotation.x);
+        //Debug.Log(transform.rotation.x);
         //Debug.Log(vert);
         if(vert >= 30f || vert <= -30f)
         {

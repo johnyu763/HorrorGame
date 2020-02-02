@@ -1,6 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/TextMesh Pro.meta
 guid: f54d1bd14bd3ca042bd867b519fee8cc
 folderAsset: yes
+=======
+guid: 74612554f72e2cf46a60080abb1073dd
+folderAsset: yes
+timeCreated: 1459952277
+licenseType: Store
+>>>>>>> John:Assets/FarlandSkies.meta
+=======
+guid: f54d1bd14bd3ca042bd867b519fee8cc
+folderAsset: yes
+>>>>>>> John
 DefaultImporter:
   externalObjects: {}
   userData: 

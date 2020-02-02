@@ -5,11 +5,11 @@ using UnityEngine;
 public class Moving : MonoBehaviour
 {
     private CharacterController controller;
-    private float verticalVelocity;
+    // private float verticalVelocity;
     private Vector3 moveVector;
-    private Vector3 jumpVector;
-    private float gravity = 14.0f;
-    private float jumpForce = 10.0f;
+    // private Vector3 jumpVector;
+    // private float gravity = 14.0f;
+    // private float jumpForce = 10.0f;
     private bool canMove = true;
 
     private Animator anim;

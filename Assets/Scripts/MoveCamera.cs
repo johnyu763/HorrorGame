@@ -9,35 +9,18 @@ public class MoveCamera : MonoBehaviour
 
     void Start()
     {
-        offset = transform.position - Player.transform.position;
     }
 
-    void LateUpdate()
+    void Update()
     {
-
-        //var rot = Input.GetAxisRaw("Mouse X") * Time.deltaTime * 180;
+        Debug.Log(Screen.currentResolution);
         var vert = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * 180;
-        //offset = Quaternion.AngleAxis(rot, Vector3.up) * offset;
-        //transform.position = Player.transform.position + offset;
-
-        Debug.Log(transform.rotation.x);
-        //Debug.Log(vert);
-        if(vert >= 30f || vert <= -30f)
-        {
-
-        }
-        else if(-0.4f <= transform.rotation.x && transform.rotation.x <= 0.4f) 
-        {
-            transform.Rotate(-vert, 0f,0f);
-        }
-        else if(-0.39f >= transform.rotation.x && vert <= 0)
+        Debug.Log(transform.rotation.x - vert / 180f);
+        if(transform.rotation.x - vert/180f >= -0.3f && transform.rotation.x - vert/180f <= 0.35f)
         {
             transform.Rotate(-vert, 0f, 0f);
         }
-        else if (0.39f <= transform.rotation.x && vert >= 0)
-        {
-            transform.Rotate(-vert, 0f, 0f);
-        }
+      
 
     }
 }

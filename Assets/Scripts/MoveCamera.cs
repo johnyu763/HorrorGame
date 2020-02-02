@@ -15,11 +15,29 @@ public class MoveCamera : MonoBehaviour
     void LateUpdate()
     {
 
-        var rot = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 180;
-        this.transform.RotateAround(Player.transform.position, Vector3.up,rot);
-        offset = Quaternion.AngleAxis(rot, Vector3.up) * offset;
-        transform.Translate(0f, 0f, 3 * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.position = Player.transform.position + offset;
-        transform.rotation = Player.transform.rotation;
+        //var rot = Input.GetAxisRaw("Mouse X") * Time.deltaTime * 180;
+        var vert = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * 180;
+        //offset = Quaternion.AngleAxis(rot, Vector3.up) * offset;
+        //transform.position = Player.transform.position + offset;
+
+        Debug.Log(transform.rotation.x);
+        //Debug.Log(vert);
+        if(vert >= 30f || vert <= -30f)
+        {
+
+        }
+        else if(-0.4f <= transform.rotation.x && transform.rotation.x <= 0.4f) 
+        {
+            transform.Rotate(-vert, 0f,0f);
+        }
+        else if(-0.39f >= transform.rotation.x && vert <= 0)
+        {
+            transform.Rotate(-vert, 0f, 0f);
+        }
+        else if (0.39f <= transform.rotation.x && vert >= 0)
+        {
+            transform.Rotate(-vert, 0f, 0f);
+        }
+
     }
 }

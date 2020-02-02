@@ -27,11 +27,11 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveVector = new Vector3(0f, 0f, walkSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        rotation.y = Input.GetAxisRaw("Horizontal") * 180 * Time.deltaTime;
+        moveVector = new Vector3(walkSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, walkSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        rotation.y = Input.GetAxisRaw("Mouse X") * 180 * Time.deltaTime;
         transform.Rotate(0f, rotation.y, 0f);
 
-
+        /* 
         if (controller.isGrounded)
         {
             verticalVelocity = -gravity * Time.deltaTime;
@@ -48,6 +48,7 @@ public class Moving : MonoBehaviour
         }
         jumpVector.y = verticalVelocity * Time.deltaTime;
         controller.Move(jumpVector * transform.localScale.y);
+        */
 
         if (canMove) { 
             controller.Move(Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * moveVector * transform.localScale.y);

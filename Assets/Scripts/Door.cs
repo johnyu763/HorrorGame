@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public GameObject home;
+    public GameObject dark;
+
+    public GameObject firstDialogue;
+    public GameObject endDialogue;
+
+    private MissionControl mc;
     // Start is called before the first frame update
+    private void Start()
+    {
+        mc = GameObject.FindGameObjectWithTag("Quests").GetComponent<MissionControl>();
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Door")
@@ -31,10 +42,12 @@ public class Door : MonoBehaviour
                                         
                     GameObject.FindGameObjectWithTag("PillBottle").transform.GetChild(0).GetComponent<Highlight>().isHighlightable = false;
                     other.tag = "Disable";
+
+                    StartCoroutine(showText());
                 }
             }
         }
-        else if (other.tag == "BathroomCabinet")
+        else if (other.tag == "BathroomCabinet" && mc.stateNum == 1)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -51,5 +64,25 @@ public class Door : MonoBehaviour
                 }
             }
         }
+        else if (other.tag == "CoffeeCup" && mc.stateNum == 2)
+        {
+            dark.SetActive(true);
+            home.SetActive(false);
+
+            StartCoroutine(showEnd());
+        }
+    }
+
+    IEnumerator showText()
+    {
+        firstDialogue.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        firstDialogue.SetActive(false);
+    }
+
+    IEnumerator showEnd()
+    {
+        yield return new WaitForSeconds(5f);
+        endDialogue.SetActive(true);
     }
 }

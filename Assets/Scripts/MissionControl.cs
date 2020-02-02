@@ -5,7 +5,7 @@ using UnityEngine;
 public class MissionControl : MonoBehaviour
 {
     private Animator anim;
-    private int stateNum = 0;
+    public int stateNum = 0;
     public GameObject horror;
     public GameObject home;
     public GameObject bathDoor;
@@ -30,7 +30,7 @@ public class MissionControl : MonoBehaviour
         {
             aud.enabled = true;
         }
-        if(stateNum >= 2 && !played)
+        else if(stateNum >= 2 && !played)
         {
             Animator altnim = bathDoor.GetComponent<Animator>();
             StartCoroutine(teleport());

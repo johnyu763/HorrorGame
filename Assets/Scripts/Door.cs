@@ -18,5 +18,21 @@ public class Door : MonoBehaviour
                 anim.SetTrigger("DoorButton");
             }
         }
+        else if (other.tag == "PillBottle")
+        {
+            Debug.Log("Entered");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                GameObject questLog = GameObject.FindGameObjectWithTag("Quests");
+
+                if (questLog != null)
+                {
+                    StartCoroutine(questLog.GetComponent<MissionControl>().nextState());
+                                        
+                    GameObject.FindGameObjectWithTag("PillBottle").transform.GetChild(0).GetComponent<Highlight>().isHighlightable = false;
+                    other.tag = "Disable";
+                }
+            }
+        }
     }
 }

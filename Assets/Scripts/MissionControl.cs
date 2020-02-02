@@ -21,7 +21,7 @@ public class MissionControl : MonoBehaviour
         }
     }
 
-    IEnumerator nextState()
+    public IEnumerator nextState()
     {
         anim.SetInteger("stateNum", ++stateNum);
         yield return new WaitForSeconds(10f);

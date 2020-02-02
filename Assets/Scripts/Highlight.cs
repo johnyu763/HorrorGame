@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Highlight : MonoBehaviour
 {
+    public bool isHighlightable = true;
+
     private Color startColor;
     private Color highlightColor = Color.yellow;
 
@@ -24,7 +26,10 @@ public class Highlight : MonoBehaviour
 
     void OnMouseEnter()
     {
-        ren.material.SetColor("_Color", highlightColor);
+        if (isHighlightable)
+        {
+            ren.material.SetColor("_Color", highlightColor);
+        }
     }
     void OnMouseExit()
     {

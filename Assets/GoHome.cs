@@ -6,6 +6,7 @@ public class GoHome : MonoBehaviour
 {
     public GameObject home;
     public GameObject horror;
+    public Material mat;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class GoHome : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         home.SetActive(true);
+        RenderSettings.skybox = mat;
         horror.SetActive(false);
         
     }

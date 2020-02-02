@@ -10,10 +10,12 @@ public class MissionControl : MonoBehaviour
     public GameObject home;
     public GameObject bathDoor;
     private bool played = false;
+    private AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,10 @@ public class MissionControl : MonoBehaviour
             StartCoroutine(nextState());
         }
 
+        if(stateNum == 1)
+        {
+            aud.enabled = true;
+        }
         if(stateNum >= 2 && !played)
         {
             Animator altnim = bathDoor.GetComponent<Animator>();
@@ -41,7 +47,7 @@ public class MissionControl : MonoBehaviour
     
     IEnumerator teleport()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
         home.SetActive(false);
         horror.SetActive(true);
         played = true;

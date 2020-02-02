@@ -9,6 +9,7 @@ TagManager:
   - PillBottle
   - Disable
   - BathroomCabinet
+  - CoffeeCup
   layers:
   - Default
   - TransparentFX

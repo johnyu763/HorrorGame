@@ -2654,6 +2654,7 @@ RectTransform:
   - {fileID: 1491448434}
   - {fileID: 2091712993}
   - {fileID: 1587490837}
+  - {fileID: 1846473518}
   m_Father: {fileID: 737076982}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3147,8 +3148,9 @@ GameObject:
   - component: {fileID: 1846473517}
   - component: {fileID: 1846473516}
   - component: {fileID: 1846473515}
+  - component: {fileID: 1846473519}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: secondMissionMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3163,7 +3165,7 @@ SphereCollider:
   m_GameObject: {fileID: 1846473514}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -3174,7 +3176,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846473514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3220,13 +3222,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846473514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9454942, y: 2.5710123, z: -7.620588}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4090.762, y: -1036.6943, z: -21.733688}
+  m_LocalScale: {x: 0.18895574, y: 0.18895574, z: 0.18895574}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1610045156}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1846473519
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846473514}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286709649
+  m_Size: 0.5
 --- !u!1 &1849781874
 GameObject:
   m_ObjectHideFlags: 0
